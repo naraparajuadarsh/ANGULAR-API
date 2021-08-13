@@ -1,0 +1,80 @@
+<table class="table table stripped">
+    <thead>
+        <tr>
+            <td>first_name</td>
+            <td>last_name</td>
+            <td>email</td>
+            <td>id</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor= "let object of objects">
+                <td>{{object.first_name}}</td>
+                <td>{{object.last_name}}</td>
+                <td>{{object.email}}</td>
+                <td>{{object.id}}</td>
+        </tr>
+    </tbody>
+    
+    <br><br>
+
+</table>
+
+<table  class="table  table-bordered student table-responsive">
+    <thead class="thead-dark bg-success">
+        <tr>
+            <td><b>Name</b></td>
+            <td><b>Id</b></td>
+            <td><b>Email</b></td>
+            <td><b>Gender</b></td>
+            <td><b>Status</b></td>
+        </tr>
+    </thead>
+    <tbody>
+         <tr *ngFor="let student of students">
+            <td>{{student.name}}</td>
+            <td>{{student.id}}</td>
+            <td>{{student.email}}</td>
+            <td>{{student.gender}}</td>
+            <td>{{student.status}}</td>
+        </tr>
+    </tbody>
+</table>
+
+
+<form [formGroup]="myform">
+
+    <label>Name</label>
+    <input type="text" formControlName="name">
+    
+    <br>
+
+    <label>Job</label>
+    <input type="text" formControlName="job">
+
+    <br>
+    <button (click)="subimit()">Creat</button>
+</form>
+
+<br><br>
+
+<form [formGroup]="mysalary">
+
+    <label>Name</label>
+    <input type="text" formControlName="name">
+
+    <br>
+
+    <label>salary</label>
+    <input type="text" formControlName="salary">
+
+    <br>
+
+    <label>age</label>
+    <input type="text" formControlName="age">
+
+    <br>
+
+    <button (click)="submit2()">Creat</button>
+</form>
+<app-myprogram></app-myprogram>
